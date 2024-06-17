@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Kraytek - Your Presonalised crypto app</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="mainMenu">
+                <ul>
+                <li id="logo"><img src="./assets/logo.svg"></li>
+                <li id="optionAbout" style="float:right">
+                    <button>
+                    <a href="#footer"><span>History</span></a> 
+                </button></li>
+                <li id="optionLogIn" style="float:right">
+                <button class="botun">
+                    <a><span>Log In</span></a> 
+                </button>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="mainText">
+                <div id="gasbajo">New era of banking</div>
+                <br/>
+                <span id="textInfo">
+                    Kraytak is a cutting-edge online banking app that leverages blockchain technology to provide secure and transparent financial services. Designed for the modern user, Kraytak offers seamless transactions, real-time tracking, and enhanced security features that protect your financial data from unauthorized access. With its user-friendly interface, Kraytak simplifies banking, making it easy to manage accounts, transfer funds, and monitor investments anytime, anywhere. Embrace the future of banking with Kraytak and experience unparalleled efficiency and reliability in your financial dealings. Join the revolution and enjoy a new level of trust and convenience in online banking.
+                </span>
+            
+            </div>
+            <span id="mainCreditCard">
+               <img src="./assets/Card1.svg">
+            </span>
+        </div>
+            <div id="payentForm">
+                <div id="paymentWrap1">
+                <form>
+                    <div class="textInputWrapper">
+                        <input type="text" id="recivingWallet" placeholder="Input recepient wallet here">
+                    </div>
+                    <div class="textInputWrapper">
+                        <input type="number" id="moneySend" placeholder="enter amount you want to send">
+                    </div>
+                    <div class="textInputWrapper">
+                        <input type="text" id="gifSend" placeholder="Gif name">
+                    </div>
+                    <div class="textInputWrapper">
+                        <input type="text" id="messageSend" placeholder="Enter message">
+                    </div>
+                    
+                </form>
+                <button id="submit">
+                    Pay
+                    <svg class="svgIcon" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+                  </button>
+                </div>
+                  <div class="v29_21">
+                    <div class="v23_5">
+                    </div>
+                    <span class="v23_10">09/11</span>
+                    <span class="v23_11" id="adresstxt">0x*****************</span>
+                    <span class="v23_18" id="balancetxt">****</span>
+                    <span class="v23_19">Current balance</span>
+                    <div class="v7_28"></div>
+                </div>
+
+            </div>
+            
+            
+        <div id="footer">
+            <h1>Transaction history</h1>
+            <div id="transactionsContainer">
+                
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/dist/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+html {
+   scroll-behavior: smooth;
+  }
+
+@font-face {
+   font-family: fontNovi;
+   src: url(./assets/DMSans-VariableFont_opsz\,wght.ttf);
+ }
+
+body {
+ background-color: #000101;
+ font-family: fontNovi;
+}
+
+#wrapper{
+   padding-left: 15%;
+   padding-right: 15%;
+
+}
+
+#payentForm {
+    display: none;
+    float: none;
+    padding-top: 70%;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #000101;
+ }
+
+ li {
+   padding-right: 10%;
+   float: left;
+ }
+ 
+a {
+   position: relative;
+   display: inline-block;
+   padding: 15px 30px;
+   border: 2px solid #fefefe;
+   text-transform: uppercase;
+   color: #fefefe;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 20px;
+ }
+ 
+ a::before {
+   content: '';
+   position: absolute;
+   top: 6px;
+   left: -2px;
+   width: calc(100% + 4px);
+   height: calc(100% - 12px);
+   background-color: #000101;
+   transition: 0.2s ease-in-out;
+   transform: scaleY(1);
+ }
+ 
+ a:hover::before {
+   transform: scaleY(0);
+ }
+ 
+ a::after {
+   content: '';
+   position: absolute;
+   left: 6px;
+   top: -2px;
+   height: calc(100% + 4px);
+   width: calc(100% - 12px);
+   background-color: #000101;
+   transition: 0.2s ease-in-out;
+   transform: scaleX(1);
+   transition-delay: 0.2s;
+ }
+ 
+ a:hover::after {
+   transform: scaleX(0);
+ }
+ 
+ a span {
+   position: relative;
+   z-index: 3;
+ }
+ 
+ button {
+   background-color: none;
+   text-decoration: none;
+   background-color: #000101;
+   border: none;
+ }
+
+ #logo img{
+   margin-left: 5rem;
+   margin-top: 1rem;
+   width: 30%;
+   height: 30%;
+ }
+
+ #mainText {
+   padding-top: 20%;
+   width: 50%;
+   height: auto;
+   font-family: fontNovi;
+   color: #fefefe;
+   float: left;
+ }
+
+ #gasbajo {
+
+   font-size: 70px;
+
+ }
+
+ #textInfo {
+   padding-top: 5%;
+   font-size: 15px;
+ }
+
+ #mainCreditCard {
+   padding-right: 10%;
+   padding-top: 30%;
+   float:right;
+
+ }
+
+ #submit {
+   
+   margin: 2%;
+   width: 130px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(15, 15, 15);
+   border: none;
+   color: white;
+   font-weight: 600;
+   gap: 8px;
+   cursor: pointer;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+   position: relative;
+   overflow: hidden;
+   transition-duration: .3s;
+ }
+ 
+ .svgIcon {
+   width: 16px;
+ }
+ 
+ .svgIcon path {
+   fill: white;
+ }
+ 
+ #submit::before {
+   width: 130px;
+   height: 130px;
+   position: absolute;
+   content: "";
+   background-color: white;
+   border-radius: 50%;
+   left: -100%;
+   top: 0;
+   transition-duration: .3s;
+   mix-blend-mode: difference;
+ }
+ 
+ #submit:hover::before {
+   transition-duration: .3s;
+   transform: translate(100%,-50%);
+   border-radius: 0;
+ }
+ 
+ #submit:active {
+   transform: translate(5px,5px);
+   transition-duration: .3s;
+ }
+
+ .textInputWrapper {
+   margin-bottom: 3%;
+
+   position: relative;
+   width: 180px;
+   margin: 12px 5px;
+   --accent-color: #a3e583;
+ }
+ 
+ .textInputWrapper:before {
+   transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+ }
+ 
+ .textInputWrapper:before,
+ .textInputWrapper:after {
+   content: "";
+   left: 0;
+   right: 0;
+   position: absolute;
+   pointer-events: none;
+   bottom: -1px;
+   z-index: 4;
+   width: 100%;
+ }
+ 
+ .textInputWrapper:focus-within:before {
+   border-bottom: 1px solid var(--accent-color);
+ }
+ 
+ .textInputWrapper:before {
+   transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+ }
+ 
+ .textInputWrapper:focus-within:before {
+   border-bottom: 1px solid var(--accent-color);
+   transform: scaleX(1);
+ }
+ 
+ .textInputWrapper:focus-within:after {
+   border-bottom: 2px solid var(--accent-color);
+   transform: scaleX(1);
+ }
+ 
+ .textInputWrapper:after {
+   content: "";
+   transform: scaleX(0);
+   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+   will-change: transform;
+   border-bottom: 2px solid var(--accent-color);
+   border-bottom-color: var(--accent-color);
+ }
+ 
+ .textInput::placeholder {
+   transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+   opacity: 1;
+   user-select: none;
+   color: rgba(255, 255, 255, 0.582);
+ }
+ 
+ .textInputWrapper .textInput {
+   border-radius: 5px 5px 0px 0px;
+   box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+   max-height: 36px;
+   background-color: #252525;
+   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+   transition-duration: 200ms;
+   transition-property: background-color;
+   color: #e8e8e8;
+   font-size: 14px;
+   font-weight: 500;
+   padding: 12px;
+   width: 100%;
+   border-left: none;
+   border-bottom: none;
+   border-right: none;
+ }
+ 
+ .textInputWrapper .textInput:focus,
+ .textInputWrapper .textInput:active {
+   outline: none;
+ }
+ 
+ .textInputWrapper:focus-within .textInput,
+ .textInputWrapper .textInput:focus,
+ .textInputWrapper .textInput:active {
+   background-color: #353535;
+ }
+ 
+ .textInputWrapper:focus-within .textInput::placeholder {
+   opacity: 0;
+ }
+
+ input {
+   color:#e8e8e8;
+   background-color: rgb(15, 15, 15);
+   height: 3rem;
+   width: auto;
+
+ }
+ 
+ form {
+ 
+   width: 60%;
+   height: auto;
+ }
+
+ #paymentWrap1{
+   float: left;
+ }
+
+ .v29_21 {
+   margin-right: 10%;
+   margin-bottom: 10%;
+   float: right;
+   width: 315px;
+   height: 184px;
+   background: url("../images/v29_21.png");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   opacity: 1;
+   position: relative;
+   top: 0px;
+   left: 0px;
+   overflow: hidden;
+ }
+ .v23_5 {
+   width: 315px;
+   height: 184px;
+   background: linear-gradient(rgba(243,151,44,1), rgba(248,58,172,1));
+   opacity: 1;
+   position: relative;
+   top: 0px;
+   left: 0px;
+   border: 0px solid rgba(150,150,150,1);
+   border-top-left-radius: 12px;
+   border-top-right-radius: 12px;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+   overflow: hidden;
+ }
+ .v23_10 {
+   width: 47px;
+   color: rgba(255,255,255,1);
+   position: absolute;
+   top: 144px;
+   left: 236px;
+   font-family: fontNovi;
+   font-weight: Medium;
+   font-size: 14px;
+   opacity: 1;
+   text-align: right;
+ }
+ .v23_11 {
+   width: 165px;
+   color: rgba(255,255,255,1);
+   position: absolute;
+   top: 146px;
+   left: 30px;
+   font-family: fontNovi;
+   font-weight: Medium;
+   font-size: 14px;
+   opacity: 0.8999999761581421;
+   text-align: left;
+ }
+ .v23_18 {
+   width: 145px;
+   color: rgba(255,255,255,1);
+   position: absolute;
+   top: 52px;
+   left: 30px;
+   font-family: fontNovi;
+   font-weight: Medium;
+   font-size: 28px;
+   opacity: 1;
+   text-align: left;
+ }
+ .v23_19 {
+   width: 126px;
+   color: rgba(255,255,255,1);
+   position: absolute;
+   top: 30px;
+   left: 30px;
+   font-family: fontNovi;
+   font-weight: Medium;
+   font-size: 14px;
+   opacity: 0.5400000214576721;
+   text-align: left;
+ }
+ .v7_28 {
+   width: 95px;
+   height: 95px;
+   background: url("./assets/v7_28.png");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   opacity: 1;
+   position: absolute;
+   top: 0px;
+   left: 212px;
+   overflow: hidden;
+ }
+ 
+ #footer {
+   display: none;
+   color: #e8e8e8;
+   padding-top: 30%;
+}
+
+#transactionsContainer {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.card {
+   display: flex;
+   flex-direction: column; /* Set the card content direction to column */
+   width: 250px;
+   height: auto; /* Adjust height automatically based on content */
+   background: rgb(46, 44, 44);
+   transition: all 300ms;
+   margin-bottom: 10px;
+   padding: 10px; /* Add padding for better text visibility */
+   box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+   word-wrap: break-word; /* Ensure long words break to the next line */
+}
+
+.card:hover {
+   opacity: 0.8;
+   transform: scale(1.10);
+}
+
+.card #gif {
+   margin-top: auto; /* Push gif to the bottom */
+}
+
+.card #gif img {
+   display: block;
+   margin: 10px auto;
+   max-width: 100%; /* Ensure image does not overflow the card */
+   height: auto;
+}
+
+.card div {
+   margin-bottom: 5px; /* Add spacing between text elements */
+   color: white; /* Ensure text is visible on the dark background */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: normal;
+}
